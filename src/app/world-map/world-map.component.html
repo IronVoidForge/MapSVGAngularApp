@@ -1,0 +1,14 @@
+<!-- create map column with svg object and info column with info labels for each data point -->
+<div class = 'row'>
+    <div class = 'map-column'>
+        <object type = 'image/svg+xml' data = 'assets/map.svg' #svgObject (load) = 'onSVGLoad()'> Your browser does not support SVG</object>
+    </div>
+    <div class = 'info-column'>
+        <p>Country Name: {{ currentCountry.name }}</p>
+        <p>Capital: {{ currentCountry.capital }}</p>
+        <p>Region: {{ currentCountry.region }}</p>
+        <p>Income Level: {{ currentCountry.income_level }}</p>
+        <p>GDP Per Capita for {{ currentCountry.gdp_year }}: ${{ currentCountry.gdp_per_capita }}</p>
+        <p>Literacy Rate for {{ currentCountry.literacy_year }}: {{ currentCountry.literacy_rate }}%</p>
+    </div>
+</div>
